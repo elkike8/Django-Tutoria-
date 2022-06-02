@@ -3,10 +3,12 @@ from django.http import HttpResponse
 
 # Create your views here.
 def home(request):
-    return HttpResponse('<h1> Blog Home</h1>')
+    return render(request, "blog/home.html")
+
 
 def test_area(request):
-    return HttpResponse('<h1> Test Area</h1>')
+    return render(request, "blog/test_area.html")
 
-def test_area_2(request):
-    return HttpResponse('<h1>Second Test Area</h1>')
+
+def homie(request):
+    return render(request, "blog/the_homie_page.html")
